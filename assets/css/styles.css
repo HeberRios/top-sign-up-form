@@ -1,0 +1,43 @@
+/* CSS RESET ------------------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS VARIABLES --------------------------------------------------------- */
+:root {
+    /* COLORS */
+    --valid-blue: #007af5;
+    --invalid-red: #f32e2b;
+    --white: #f4f4f5;
+    --black: #1b143d;
+}
+
+/* orbitron-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/orbitron-v31-latin-regular.woff2") format("woff2");
+}
+
+/* orbitron-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/orbitron-v31-latin-700.woff2") format("woff2");
+}
+
+/* orbitron-900 - latin */
+@font-face {
+    font-display: swap;
+    font-family: "Orbitron";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../fonts/orbitron-v31-latin-900.woff2") format("woff2");
+}
