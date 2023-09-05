@@ -12,7 +12,8 @@
     --valid-blue: #007af5;
     --invalid-red: #f32e2b;
     --white: #f4f4f5;
-    --black: #1b143d;
+    --black: #131315;
+    --black-transparent: #131315c8;
 }
 
 /* orbitron-regular - latin */
@@ -41,3 +42,72 @@
     font-weight: 900;
     src: url("../fonts/orbitron-v31-latin-900.woff2") format("woff2");
 }
+
+/* GENERAL STYLING ------------------------------------------------------- */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--black);
+    font-family: "Orbitron", sans-serif;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    height: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ASIDE IMAGE SECTION --------------------------------------------------- */
+.image-box {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-image: url("../images/Nekravol.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 3.2rem;
+    color: var(--white);
+    margin-top: calc(100vh - 75vh);
+    background-color: var(--black-transparent);
+}
+
+.logo-image {
+    width: 15%;
+    min-width: 8rem;
+    filter: hue-rotate(295deg) saturate(1000%);
+}
+
+.logo-text {
+    font-size: 8.6rem;
+    font-weight: 900;
+}
+
+.form-box {
+    width: 66.66%;
+}
+
+/* --FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+--SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
