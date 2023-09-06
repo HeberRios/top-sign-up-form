@@ -51,8 +51,9 @@ html {
 body {
     display: flex;
     min-height: 100vh;
-    background-color: var(--black);
     font-family: "Orbitron", sans-serif;
+    color: var(--white);
+    background-color: var(--black);
 }
 
 main {
@@ -86,7 +87,6 @@ img {
     align-items: center;
     gap: 4rem;
     padding: 3.2rem;
-    color: var(--white);
     margin-top: calc(100vh - 75vh);
     background-color: var(--black-transparent);
 }
