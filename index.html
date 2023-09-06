@@ -23,18 +23,18 @@
                 <div class="service-info-container">
                     <div class="service-description-container">
                         <p class="description-text">
-                            This is not a real online service! Lorem ipsum dolor
-                            sit amet consectetur adipisicing elit. Saepe tempore
-                            dolor incidunt eaque numquam architecto sunt, est
-                            fuga, provident, enim quam asperiores tempora ea
-                            facilis dignissimos perferendis ipsum ducimus
-                            perspiciatis.
+                            <strong>This is not a real online service!</strong>,
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Saepe tempore dolor incidunt eaque numquam
+                            architecto sunt, est fuga, provident, enim quam
+                            asperiores tempora ea facilis dignissimos
+                            perferendis ipsum ducimus perspiciatis.
                         </p>
                         <p class="description-text">You know you want to.</p>
                     </div>
                     <div class="service-form-container">
                         <p class="form-title">Let`s do this!</p>
-                        <form id="sign-up-form" action="">
+                        <form id="sign-up-form" action="" class="sign-up-form">
                             <div class="first-form-column">
                                 <label for="first-name">first name</label>
                                 <input
@@ -42,14 +42,17 @@
                                     name="first-name"
                                     id="first-name"
                                 />
+                                <span class="error" aria-live="polite">*</span>
                                 <label for="email">email</label>
                                 <input type="email" name="email" id="email" />
+                                <span class="error" aria-live="polite">*</span>
                                 <label for="password">password</label>
                                 <input
                                     type="password"
                                     name="password"
                                     id="password"
                                 />
+                                <span class="error" aria-live="polite">*</span>
                             </div>
                             <div class="second-form-column">
                                 <label for="last-name">last name</label>
@@ -58,8 +61,10 @@
                                     name="last-name"
                                     id="last-name"
                                 />
+                                <span class="error" aria-live="polite">*</span>
                                 <label for="phone">phone number</label>
                                 <input type="tel" name="phone" id="phone" />
+                                <span class="error" aria-live="polite">*</span>
                                 <label for="confirm-password"
                                     >confirm password</label
                                 >
@@ -68,11 +73,16 @@
                                     name="confirm-password"
                                     id="confirm-password"
                                 />
+                                <span class="error" aria-live="polite">*</span>
                             </div>
                         </form>
                     </div>
                     <div class="call-to-action-container">
-                        <button form="sign-up-form" type="submit">
+                        <button
+                            class="create-account-btn"
+                            form="sign-up-form"
+                            type="submit"
+                        >
                             Create Account
                         </button>
                         <p class="cta-text">

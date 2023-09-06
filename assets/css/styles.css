@@ -11,9 +11,12 @@
     /* COLORS */
     --valid-blue: #007af5;
     --invalid-red: #f32e2b;
+    --invalid-red-hover: #f55855;
+    --invalid-red-box-shadow: #f32e2b2e;
     --white: #f4f4f5;
     --black: #131315;
     --black-transparent: #131315c8;
+    --dark-grey: #181818;
 }
 
 /* orbitron-regular - latin */
@@ -53,6 +56,7 @@ body {
     min-height: 100vh;
     font-family: "Orbitron", sans-serif;
     color: var(--white);
+    letter-spacing: 0.15rem;
     background-color: var(--black);
 }
 
@@ -102,8 +106,139 @@ img {
     font-weight: 900;
 }
 
-.form-box {
+.service-box {
     width: 66.66%;
+}
+
+/* SERVICE BOX SECTION --------------------------------------------------- */
+.service-box {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-grey);
+}
+
+.service-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.service-description-container,
+.service-form-container,
+.call-to-action-container {
+    padding: 0 4.8rem;
+}
+
+.service-description-container,
+.sign-up-form,
+.call-to-action-container {
+    max-width: 110rem;
+}
+
+/* SERVICE DESCRIPTION STYLES */
+.service-description-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+strong {
+    font-weight: 900;
+    color: var(--invalid-red);
+}
+
+.description-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* SERVICE FORM STYLES */
+
+.service-form-container {
+    padding: 3.2rem 4.8rem;
+    background-color: var(--black);
+    box-shadow: 0.5rem 0.5rem 1rem 0 var(--invalid-red-box-shadow);
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+}
+
+.sign-up-form {
+    display: flex;
+    gap: 6.4rem;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.4rem;
+}
+
+.first-form-column,
+.second-form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 40%;
+}
+
+input {
+    font-family: inherit;
+    letter-spacing: inherit;
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+
+span.error {
+    opacity: 0;
+    margin-bottom: 1rem;
+}
+
+span:last-child {
+    margin-bottom: 0;
+}
+
+/* CALL TO ACTION STYLES */
+.create-account-btn {
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: inherit;
+    background-color: var(--invalid-red);
+    padding: 1.5rem 4rem;
+    margin-bottom: 4.8rem;
+    transition: all 0.3s;
+}
+
+.create-account-btn:hover,
+.create-account-btn:active {
+    cursor: pointer;
+    background-color: var(--invalid-red-hover);
+}
+
+.cta-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.cta-text a {
+    font-weight: 900;
+}
+
+a:link,
+a:visited {
+    color: var(--invalid-red);
+    text-decoration: none;
 }
 
 /* --FONT SIZE SYSTEM (px)
