@@ -203,6 +203,8 @@ input:focus {
 
 span.error {
     opacity: 0;
+    color: var(--invalid-red);
+    font-weight: 900;
     margin-bottom: 1rem;
 }
 
@@ -243,6 +245,16 @@ a:link,
 a:visited {
     color: var(--invalid-red);
     text-decoration: none;
+}
+
+/* INPUT ERROR STYLES ---------------------------------------------------- */
+input.invalid {
+    box-shadow: 0 0 0 0.5rem var(--invalid-red);
+    outline: none;
+}
+
+span.error.active {
+    opacity: 1;
 }
 
 /* --FONT SIZE SYSTEM (px)
