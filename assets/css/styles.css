@@ -98,7 +98,7 @@ img {
 .logo-image {
     width: 15%;
     min-width: 8rem;
-    filter: hue-rotate(295deg) saturate(1000%);
+    filter: hue-rotate(295deg) saturate(10000%);
 }
 
 .logo-text {
@@ -195,6 +195,10 @@ input {
     outline: none;
     border: none;
     border-radius: 0;
+}
+
+input:focus {
+    outline: 0.3rem solid var(--valid-blue);
 }
 
 span.error {
