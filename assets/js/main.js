@@ -24,7 +24,7 @@ const nameRegEx =
     /^[a-zA-Z\xC0-\uFFFF]+([ \-']{0,1}[a-zA-Z\xC0-\uFFFF]+){0,}[.]{0,1}$/;
 const emailRegEx =
     /^([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)+|\[[\t -Z^-~]*])$/;
-const phoneRegEx = /^\(?(\d{3})\)?[\-\ \.]?(\d{3})[\-\ \.]?(\d{4})$/;
+const phoneRegEx = /^(\d{3})[\-]?(\d{3})[\-]?(\d{4})$/;
 const passwordRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{10,}/;
 
 // FUNCTIONS -------------------------------------------------------------
@@ -79,9 +79,27 @@ function emailValidation() {
     }
 }
 
+function phoneValidation() {
+    if (phoneRegEx.test(phone.value)) {
+        phone.classList.remove("invalid");
+        phoneError.textContent = "OK";
+        phoneError.classList.remove("active");
+    console.log("help");
+    } else {
+        phone.classList.add("invalid");
+        phoneError.textContent =
+            "* Accepted formats: 123-456-7891 or 1234567891";
+        phoneError.classList.add("active");
+    // console.log("help");
+    }
+}
+
+// Accepted formats :123-456-7891 or 1234567891
 // INPUT VALIDATIONS
 firstName.addEventListener("input", FirstNameValidation);
 
 lastName.addEventListener("input", lastNameValidation);
 
 email.addEventListener("input", emailValidation);
+
+phone.addEventListener("input", phoneValidation);
