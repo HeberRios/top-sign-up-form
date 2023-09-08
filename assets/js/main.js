@@ -25,7 +25,7 @@ const nameRegEx =
 const emailRegEx =
     /^([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|"([]!#-[^-~ \t]|(\\[\t -~]))+")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)+|\[[\t -Z^-~]*])$/;
 const phoneRegEx = /^(\d{3})[\-]?(\d{3})[\-]?(\d{4})$/;
-const passwordRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{10,}/;
+const passwordRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!@$%^&*-]).{14,}/;
 
 // FUNCTIONS -------------------------------------------------------------
 
@@ -84,17 +84,41 @@ function phoneValidation() {
         phone.classList.remove("invalid");
         phoneError.textContent = "OK";
         phoneError.classList.remove("active");
-    console.log("help");
+        console.log("help");
     } else {
         phone.classList.add("invalid");
         phoneError.textContent =
             "* Accepted formats: 123-456-7891 or 1234567891";
         phoneError.classList.add("active");
-    // console.log("help");
+        // console.log("help");
     }
 }
 
-// Accepted formats :123-456-7891 or 1234567891
+function passwordValidation() {
+    if (passwordRegEx.test(password.value)) {
+        password.classList.remove("invalid");
+        passwordError.textContent = "OK";
+        passwordError.classList.remove("active");
+    } else {
+        password.classList.add("invalid");
+        passwordError.textContent =
+            "* Password must have: uppercase letters, numbers, special characters (#?!@$%^&*-) and be 14 characters";
+        passwordError.classList.add("active");
+    }
+}
+
+function confirmPasswordValidation() {
+    if (confirmPassword.value === password.value) {
+        confirmPassword.classList.remove("invalid");
+        confirmPasswordError.textContent = "OK";
+        confirmPasswordError.classList.remove("active");
+    } else {
+        confirmPassword.classList.add("invalid");
+        confirmPasswordError.textContent = "* Passwords does not match.";
+        confirmPasswordError.classList.add("active");
+    }
+}
+
 // INPUT VALIDATIONS
 firstName.addEventListener("input", FirstNameValidation);
 
@@ -103,3 +127,7 @@ lastName.addEventListener("input", lastNameValidation);
 email.addEventListener("input", emailValidation);
 
 phone.addEventListener("input", phoneValidation);
+
+password.addEventListener("input", passwordValidation);
+
+confirmPassword.addEventListener("input", confirmPasswordValidation);
