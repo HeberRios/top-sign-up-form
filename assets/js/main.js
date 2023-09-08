@@ -67,7 +67,21 @@ function lastNameValidation() {
     }
 }
 
+function emailValidation() {
+    if (emailRegEx.test(email.value)) {
+        email.classList.remove("invalid");
+        emailError.textContent = "OK";
+        emailError.classList.remove("active");
+    } else {
+        email.classList.add("invalid");
+        emailError.textContent = "* Invalid email address.";
+        emailError.classList.add("active");
+    }
+}
+
 // INPUT VALIDATIONS
 firstName.addEventListener("input", FirstNameValidation);
 
 lastName.addEventListener("input", lastNameValidation);
+
+email.addEventListener("input", emailValidation);
