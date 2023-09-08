@@ -97,12 +97,12 @@ img {
 
 .logo-image {
     width: 15%;
-    min-width: 8rem;
+    min-width: 4rem;
     filter: hue-rotate(295deg) saturate(10000%);
 }
 
 .logo-text {
-    font-size: 8.6rem;
+    font-size: 7.4rem;
     font-weight: 900;
 }
 
@@ -255,6 +255,16 @@ input.invalid {
 
 span.error.active {
     opacity: 1;
+}
+
+@media (max-width: 75rem) {
+    html {
+        font-size: 9px;
+    }
+
+    .logo-text {
+        font-size: 6.2rem;
+    }
 }
 
 /* --FONT SIZE SYSTEM (px)
